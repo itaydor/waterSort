@@ -1,14 +1,5 @@
 public enum Color {
-    EMPTY("0"),
-    RED("1"),
-    BLUE("2"),
-    GREEN("3"),
-    PURPLE("4"),
-    YELLOW("5"),
-    PINK("6"),
-    BLACK("7"),
-    GRAY("8"),
-    WHITE("9"),
+    EMPTY(" "),
     DARK_GREEN("A"),
     CYAN("B"),
     INDIGO("C"),
@@ -16,7 +7,25 @@ public enum Color {
     AZURE("E"),
     BROWN("F"),
     CORAL("G"),
-    ORANGE("H");
+    ORANGE("H"),
+    RED("I"),
+    BLUE("J"),
+    GREEN("K"),
+    PURPLE("L"),
+    YELLOW("M"),
+    PINK("N"),
+    BLACK("O"),
+    GRAY("P"),
+    WHITE("Q"),
+    DARK_GREY("R"),
+    MAGENTA("S"),
+    WINE("T"),
+    CIDER("U"),
+    HONEY("V"),
+    AMBER("W"),
+    GRANOLA("X"),
+    LIME("Y"),
+    PEACH("Z");
 
 
     private final String id;
