@@ -14,11 +14,11 @@ public class LevelBuilder {
             numberOfTubes = numberOfColors;
         }
 
-        Color[][] tubeTable = new Color[numberOfTubes][4];
+
         List<Color> colors = new ArrayList<>(Arrays.stream(Color.values()).toList());
         colors.remove(0); //remove empty
 
-        fillTableWithColors(tubeTable, colors);
+        Color[][] tubeTable = buildTable(colors, numberOfTubes);
 
         List<Tube> tubeList = convertTableToList(tubeTable);
 
@@ -46,12 +46,13 @@ public class LevelBuilder {
         return tubeList;
     }
 
-    private static void fillTableWithColors(Color[][] tubeTable, List<Color> colors) {
-
+    private static Color[][] buildTable(List<Color> colors, int numberOfTubes) {
+        Color[][] tubeTable = new Color[numberOfTubes][4];
         for (int colorIndex = 0; colorIndex < tubeTable.length; colorIndex++) {
             Color color = colors.get(colorIndex);
             fillWithColor(tubeTable, color);
         }
+        return tubeTable;
     }
 
     private static void fillWithColor(Color[][] tubeTable, Color color) {
