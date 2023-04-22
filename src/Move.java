@@ -43,7 +43,7 @@ public class Move {
         Move other = (Move) o;
         return (from == other.from && to == other.to) ||
                 (from == other.from && to.isEmpty() && other.to.isEmpty()) ||
-                (from.isFull() && other.from.isFull() && from.peek() == other.from().peek() && to.isEmpty() && other.to.isEmpty()) ||
+                (from.isFinished() && other.from.isFinished() && from.peek() == other.from().peek() && to.isEmpty() && other.to.isEmpty()) ||
                 (from == other.to && to == other.from && isFillingTube());
     }
 
