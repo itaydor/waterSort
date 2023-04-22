@@ -33,7 +33,7 @@ public class Tube {
     }
 
     public boolean isFull(){
-        return drops.size() == 4;
+        return drops.size() == MAX_CAPACITY;
     }
 
     public boolean isEmpty(){
@@ -121,7 +121,7 @@ public class Tube {
     }
 
     public int emptySpots() {
-        return 4 - drops.size();
+        return MAX_CAPACITY - drops.size();
     }
 
     public int size(){
