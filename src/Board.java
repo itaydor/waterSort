@@ -76,18 +76,8 @@ public class Board {
                 }
             }
         }
-        availableMoves = filterMoves(availableMoves);
         availableMoves.sort(Move.getMoveComparator());
         return availableMoves;
-    }
-
-    private List<Move> filterMoves(List<Move> moves) {
-        return new ArrayList<>(
-                moves.stream()
-                .filter(m -> !(m.from().isHasSingleColor() && m.to().isEmpty()))
-                .filter(m -> !(m.from().numberOfTopColor() > m.to().emptySpots()))
-                .toList()
-        );
     }
 
     @Override

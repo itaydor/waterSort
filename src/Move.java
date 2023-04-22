@@ -33,7 +33,10 @@ public class Move {
     }
 
     public boolean isValid(){
-        return from != to && !from.isEmpty() && !to.isFull() && (to.isEmpty() || from.peek().equals(to.peek()));
+        return from != to && !from.isEmpty() && !to.isFull() &&
+                (to.isEmpty() || from.peek().equals(to.peek())) &&
+                !(from.isHasSingleColor() && to.isEmpty()) &&
+                !(from.numberOfTopColor() > to.emptySpots());
     }
 
     @Override
